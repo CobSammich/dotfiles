@@ -1,0 +1,123 @@
+[theme]
+name = "nord-dark"
+[theme.overrides]
+#idle_bg = "#9b60bf"
+#idle_bg = "#0bd3d3"
+idle_fg = "#00000f"
+#alternating_tint_bg = "#000000"
+
+
+[icons]
+name = "awesome5"
+#[icons.overrides]
+#music = "♪"
+
+[[block]]
+block = "music"
+player = "spotify"
+buttons = ["prev", "play", "next"]
+max_width = 80
+dynamic_width = true
+marquee = false
+#interval = 1
+[block.theme_overrides]
+info_bg = "#d71a1a"
+idle_bg = "#d71a1a"
+good_bg = "#d71a1a"
+warning_bg = "#d71a1a"
+idle_fg = "#00000f"
+good_fg = "#00000f"
+warning_fg = "#00000f"
+info_fg = "#00000f"
+
+[[block]]
+block = "sound"
+step_width = 5
+on_click = "pavucontrol"
+[block.theme_overrides]
+idle_bg = "#d71a1a"
+#idle_fg = "#00000f"
+
+[[block]]
+block = "uptime"
+[block.theme_overrides]
+idle_bg = "#f0d50c"
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+[block.theme_overrides]
+idle_bg = "#f0d50c"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
+[block.theme_overrides]
+idle_bg = "#f0d50c"
+
+[[block]]
+block = "cpu"
+interval = 1
+format = "{utilization}"
+#format = "{barchart} {utilization}"
+[block.theme_overrides]
+idle_bg = "#f0d50c"
+
+#[[block]]
+#block = "temperature"
+#collapsed = false
+#interval = 10
+#format = "{min} min, {max} max, {average} avg"
+#chip = "*-isa-*"
+#inputs = ["CPUTIN", "SYSTIN"]
+
+[[block]]
+block = "nvidia_gpu"
+label = "RTX 3090"
+show_memory = true
+show_utilization = false
+show_temperature = true
+interval = 1
+[block.theme_overrides]
+idle_bg = "#57ba37"
+
+[[block]]
+block = "speedtest"
+interval = 300
+format = "{ping}{speed_down:4*B}{speed_up:4*B}"
+[block.theme_overrides]
+idle_bg = "#91aadf"
+
+#[[block]]
+#block = "load"
+#interval = 1
+#format = "{1m}"
+
+[[block]]
+block = "weather"
+format = "{weather} {temp}F {humidity}% ({location}) [$PWD]"
+#autolocate = true
+service = { name = "openweathermap", api_key = "YOUR_API_KEY", city_id = "4744709", units = "imperial" }
+on_click = "alacritty --hold -e curl wttr.in/?Fn"
+[block.theme_overrides]
+idle_bg = "#b7cbf4"
+#idle_bg = "#ffc295"
+#idle_bg = "#c96010"
+#idle_fg = "#00000f"
+
+[[block]]
+block = "time"
+interval = 5
+on_click = "gsimplecal"
+format = "%a %m/%d %R"
+[block.theme_overrides]
+idle_bg = "#cf73e6"
+#idle_fg = "#00000f"
