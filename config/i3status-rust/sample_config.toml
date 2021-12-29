@@ -103,7 +103,7 @@ idle_bg = "#91aadf"
 
 [[block]]
 block = "weather"
-format = "{weather} {temp}F {humidity}% ({location}) [$PWD]"
+format = "{weather} {temp}F {humidity}% ({location})"
 #autolocate = true
 service = { name = "openweathermap", api_key = "YOUR_API_KEY", city_id = "4744709", units = "imperial" }
 on_click = "alacritty --hold -e curl wttr.in/?Fn"
