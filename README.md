@@ -21,3 +21,13 @@ updating all dotfiles, I must replace the API key placeholder with the actual AP
 After pulling or updating any files in this repository, run the shell script `./update_dotfiles.sh`
 to create symbolic links of all files in this repo on your system.
 
+## Showcase
+Here are a couple images showing how my system looks. This first image shows how my desktop and
+i3bar look alongside my Arch desktop's neofetch output.
+
+![](screenshots/2021-12-30_00-57.png)
+
+And here is another screenshot showing my active window for learning Rust.
+
+![](screenshots/2021-12-30_01-13.png)
+
