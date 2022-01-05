@@ -3,4 +3,9 @@
 # monitoring
 # Usage: ./show_network_devices.sh
 
-nmap -sn 192.168.1.0/24 | grep -e 'Nmap scan report for'
+# store nmap output in /tmp/devices
+nmap -sn 192.168.1.0/24 | grep -e 'Nmap scan report for' > /tmp/devices
+# read the file contents and count number of lines=number of devices
+cat /tmp/devices
+echo $(wc -l < /tmp/devices) "Devices found"
+
