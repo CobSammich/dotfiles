@@ -31,9 +31,12 @@ export PS1="$RED[\t] $YELLOW\u$GREEN@$BLUE\h:$CYAN\W$PURPLE$ $NORMAL"
 alias discord="/home/cob/Applications/Discord/Discord"
 #alias spt="snap run spt" ## Debian
 alias spt="$HOME/Applications/spt" ## Arch
+# watch the devices connected to my network
+alias show_network_devices="watch $HOME/.config/scripts/show_network_devices.sh"
 
 ## Coding
 alias python="python3"
+alias ipython="$HOME/.local/bin/ipython"
 
 ## System suspension
 alias suspend='systemctl suspend'
