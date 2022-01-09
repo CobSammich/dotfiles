@@ -218,9 +218,9 @@ bar {
 ## Literally all of the configuration below comes from this source:
 ## https://lottalinuxlinks.com/how-to-build-and-install-i3-gaps-on-debian/
 for_window [class="^.*"] border pixel 1
-gaps inner 4
-gaps outer 2
-bindsym $mod+Shift+g gaps inner all set 4; gaps outer all set 2
+gaps inner 2
+gaps outer 0
+bindsym $mod+Shift+g gaps inner all set 2; gaps outer all set 0
 bindsym $mod+Shift+n gaps inner all set 0; gaps outer all set 0
 
 # What follows here is optional and defines a mode that allows you to resize the gaps on the fly.
@@ -276,13 +276,15 @@ exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output DP-2 --pos 1
 exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dc_spiderman.png' '/home/cob/Pictures/wallpapers/vertical/night.jpg'
 #exec feh --no-fehbg --bg-scale '43_by_gydw1n_darxvlp-pre.png' '/home/cob/Pictures/wallpapers/21_by_gydw1n_dac5tet-fullview.png'
 # Get Fan colors on -- OpenRGB needs to be running in the background to persistently keep the fan colors.
-exec sudo openrgb --startminimized --profile MiamiVice.orp
+exec sudo openrgb --startminimized
+# --profile MiamiVice.orp
 # Allow bluetooth
 exec --no-startup-id pactl load-module module-bluetooth-policy
 exec --no-startup-id pactl load-module module-bluetooth-discover
 # Begin program to hide mouse after a few seconds
 exec unclutter
-
+# Compositor
+exec compton --config $HOME/.config/compton/compton.conf
 
 ### Additional Aliases
 # Moving workspaces between screens
