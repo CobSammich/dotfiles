@@ -40,6 +40,6 @@ HISTSIZE=20000
 HISTFILESIZE=20000
 
 ## run program at bash start
-#fortune
-neofetch | lolcat
+#fortune -a computers
+neofetch #| lolcat
 

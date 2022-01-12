@@ -32,7 +32,8 @@ alias discord="/home/cob/Applications/Discord/Discord"
 #alias spt="snap run spt" ## Debian
 alias spt="$HOME/Applications/spt" ## Arch
 # watch the devices connected to my network
-alias show_network_devices="watch $HOME/.config/scripts/show_network_devices.sh"
+alias show_network_devices="watch -n 5 $HOME/.config/scripts/show_network_devices.sh"
+alias latex_clean="$HOME/.config/scripts/latex_clean.sh"
 
 ## Coding
 alias python="python3"
