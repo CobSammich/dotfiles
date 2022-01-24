@@ -18,6 +18,19 @@ for file in home/.*; do
     fi
 done
 
+# update files under ~/.vim
+for file in home/.vim/*; do
+    if [ -f $file ]; then
+        # Get file basename
+        basename="${file##*/}"
+        echo $basename
+        # Delete old file
+        rm $HOME/.vim/$basename
+        # Make symbolic link to file in dotfiles
+        echo "ln -sT $file $HOME/.vim/$basename"
+        ln -sT $PWD/$file $HOME/.vim/$basename
+    fi
+done
 
 # iterate over all directories in config/ -- goes three directories deep
 for file in config/* config/**/* config/**/**/* config/**/**/**/*; do
