@@ -28,7 +28,68 @@ Plug 'jaredgorski/spacecamp'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
 call plug#end()
+
+""" vim-lsp settings
+" Show diagnostics of file
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_sign_enabled = 0
+let g:lsp_document_code_action_signs_enabled = 0 " Remove the ^A on left of line numbers
+
+" Show current line error in status
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_echo_delay = 200
+"let g:lsp_diagnostics_float_cursor = 1
+"let g:lsp_diagnostics_float_delay = 200
+
+" open function preview in new window/split. Floating window is buggy
+let g:lsp_hover_ui='preview'
+" Define symbols for different errors
+let g:lsp_diagnostics_signs_error = {'text': '✘'}
+let g:lsp_diagnostics_signs_warning = {'text': '⚠'}
+let g:lsp_diagnostics_signs_hint = {'text': '‼'}
+
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> ge <plug>(lsp-document-diagnostics)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
+    nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
+
+    let g:lsp_format_sync_timeout = 1000
+    "autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+
+    " refer to doc to add more commands
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 
 """""""""""""""""""
 " Plugin Settings "
