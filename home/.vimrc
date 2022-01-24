@@ -12,7 +12,6 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'junegunn/goyo.vim'
 
-Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 " This is pissing me off -- because it does this even when there are characters in front of it
 "Plug 'jiangmiao/auto-pairs'
 
@@ -23,11 +22,14 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'ryanoasis/vim-devicons'
 
+" Colorschemes
 "Plug 'morhetz/gruvbox'
 Plug 'jaredgorski/spacecamp'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 
+" LSP
+Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 
@@ -47,7 +49,7 @@ let g:lsp_diagnostics_echo_delay = 200
 
 " open function preview in new window/split. Floating window is buggy
 let g:lsp_hover_ui='preview'
-" Define symbols for different errors
+" Define symbols for errors/warnings/hints
 let g:lsp_diagnostics_signs_error = {'text': '✘'}
 let g:lsp_diagnostics_signs_warning = {'text': '⚠'}
 let g:lsp_diagnostics_signs_hint = {'text': '‼'}
