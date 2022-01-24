@@ -30,68 +30,38 @@ Plug 'jaredgorski/spacecamp'
 
 " LSP
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
+"Plug 'prabirshrestha/vim-lsp'
+"Plug 'mattn/vim-lsp-settings'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()
 
-""" vim-lsp settings
-" Show diagnostics of file
-let g:lsp_diagnostics_enabled = 1
-let g:lsp_diagnostics_sign_enabled = 0
-let g:lsp_document_code_action_signs_enabled = 0 " Remove the ^A on left of line numbers
+""" Coc settings
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-" Show current line error in status
-let g:lsp_diagnostics_echo_cursor = 1
-let g:lsp_diagnostics_echo_delay = 200
-"let g:lsp_diagnostics_float_cursor = 1
-"let g:lsp_diagnostics_float_delay = 200
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-" open function preview in new window/split. Floating window is buggy
-let g:lsp_hover_ui='preview'
-" Define symbols for errors/warnings/hints
-let g:lsp_diagnostics_signs_error = {'text': '✘'}
-let g:lsp_diagnostics_signs_warning = {'text': '⚠'}
-let g:lsp_diagnostics_signs_hint = {'text': '‼'}
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
-        \ })
-endif
-
-function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gs <plug>(lsp-document-symbol-search)
-    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
-    nmap <buffer> ge <plug>(lsp-document-diagnostics)
-    nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
-    nmap <buffer> K <plug>(lsp-hover)
-    nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
-    nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
-
-    let g:lsp_format_sync_timeout = 1000
-    "autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
-
-    " refer to doc to add more commands
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
 endfunction
-
-augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
 
 """""""""""""""""""
 " Plugin Settings "
