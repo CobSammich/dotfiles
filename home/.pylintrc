@@ -1,0 +1,4 @@
+[BASIC]
+
+# Don't complain about single character variable names
+good-names=i, j, f, df, dx, dy
