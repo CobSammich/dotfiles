@@ -118,6 +118,7 @@ colorscheme spacecamp
 
 " Highlight line that cursor is on
 set cursorline
+"highlight CursorLine   cterm=NONE ctermbg=NONE ctermfg=darkgreen
 
 
 " Setting tab length to 4

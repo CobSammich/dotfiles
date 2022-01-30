@@ -1,11 +1,11 @@
 app=feh
 last_user=
 last_extension=png
-screenshot_dir=file:/home/cob/Pictures/program_outputs
+screenshot_dir=file:/home/cob/Coding/projects/sudoku-solver
 enable_imgur_upload=true
 action=1
-delay=0
+delay=2
 region=3
-show_mouse=1
+show_mouse=0
 show_border=1
 

@@ -1,4 +1,10 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["python", "c", "rust", "markdown"],
+
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.pythonPath": "/usr/bin/python",
+
   "coc.source.emoji.filetypes": ["markdown"],
   "codeLens.enable": false,
   "diagnostic.errorSign": "✘",
