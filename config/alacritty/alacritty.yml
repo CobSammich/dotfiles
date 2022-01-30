@@ -117,9 +117,9 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: source code pro
+    family: source code pro
     #family: Bitstream Vera Sans Mono
-    family: DroidSansMono Nerd Font Mono
+    #family: DroidSansMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Regular
