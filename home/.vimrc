@@ -113,6 +113,8 @@ set encoding=UTF-8
 "set guifont=TerminessTTF\ Nerd\ Font\ Medium\ 11
 "set guifont=Terminess\ \(TTF\)\ Nerd\ Font\ Complete\ Mono\ 11
 
+set updatetime=300
+
 " Colorscheme
 colorscheme spacecamp
 
