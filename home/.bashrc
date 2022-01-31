@@ -39,7 +39,12 @@ export PROMPT_COMMAND="pwd > /tmp/whereami"
 HISTSIZE=20000
 HISTFILESIZE=20000
 
+# include snap installed programs in path
+export PATH="$PATH:/snap/bin/"
+
 ## run program at bash start
 #fortune -a computers
 neofetch #| lolcat
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

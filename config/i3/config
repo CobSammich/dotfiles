@@ -227,6 +227,7 @@ bar {
 
 bar {
     output HDMI-0
+    font pango:Droid Sans Mono Nerd Font, FontAwesome 12
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
     position top
 	colors {
@@ -311,7 +312,8 @@ exec --no-startup-id pactl load-module module-bluetooth-discover
 # Begin program to hide mouse after a few seconds
 exec unclutter
 # Compositor
-exec compton --config $HOME/.config/compton/compton.conf
+#exec compton --config $HOME/.config/compton/compton.conf
+exec picom --config $HOME/.config/picom.conf
 
 ### Additional Aliases
 # Moving workspaces between screens
