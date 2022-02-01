@@ -82,6 +82,8 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 lvim.lsp.diagnostics.virtual_text = false
 
+-- lvim.plugins.
+
 -- generic LSP settings
 
 -- ---@usage disable automatic installation of servers
@@ -109,7 +111,7 @@ lvim.lsp.diagnostics.virtual_text = false
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "autopep8", filetypes = { "python" } },
---   { command = "isort", filetypes = { "python" } },
+  { command = "isort", filetypes = { "python" } },
 --   {
 --     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
 --     command = "prettier",
@@ -138,6 +140,8 @@ linters.setup {
 --     filetypes = { "javascript", "python" },
 --   },
 }
+-- formatters.setup { { exe = "uncrustify", args = {} } }
+
 
 -- Additional Plugins
 lvim.plugins = {
@@ -160,5 +164,13 @@ vim.opt.virtualedit = "all"
 vim.opt.cursorline = true
 vim.opt.mouse = "nv"
 vim.opt.updatetime=300
+vim.opt.smartindent = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.smarttab = true
+vim.opt.ignorecase = true
+vim.opt.autoindent = true
 -- vim.opt.colorscheme = "spacecamp"
 
+-- C settings
+-- lvim.lsp.
