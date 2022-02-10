@@ -63,7 +63,8 @@ return packer.startup(function(use)
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
-  use "jaredgorski/spacecamp"
+  use "jaredgorski/spacecamp" -- doesn't work with rounded borders
+  use({ "catppuccin/nvim", as = "catppuccin" })
 
 
   -- cmp plugins
