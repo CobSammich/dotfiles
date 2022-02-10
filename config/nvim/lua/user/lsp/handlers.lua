@@ -60,6 +60,7 @@ local function lsp_highlight_document(client)
       augroup END
     ]]
   end
+  vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
   -- if client.resolved_capabilities.document_highlight then
     -- vim.api.nvim_exec(
       -- [[
