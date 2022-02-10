@@ -32,8 +32,8 @@ for file in home/.vim/*; do
     fi
 done
 
-# iterate over all directories in config/ -- goes three directories deep
-for file in config/* config/**/* config/**/**/* config/**/**/**/*; do
+# iterate over all directories in config/ -- goes four directories deep
+for file in config/* config/**/* config/**/**/* config/**/**/**/* config/**/**/**/**/* config/**/**/**/**/**/*; do
     if [ -f $file ]; then
         # Get file basename
         basename=${file#*/}
