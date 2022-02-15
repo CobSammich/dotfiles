@@ -131,8 +131,8 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: Space Mono Nerd Font
-    family: DroidSansMono Nerd Font
+    family: Space Mono Nerd Font
+    #family: DroidSansMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
