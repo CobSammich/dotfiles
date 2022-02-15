@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/spacecamp",
     url = "https://github.com/jaredgorski/spacecamp"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
