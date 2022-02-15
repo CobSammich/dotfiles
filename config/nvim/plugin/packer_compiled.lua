@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["codeschool.nvim"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/codeschool.nvim",
+    url = "https://github.com/adisen99/codeschool.nvim"
+  },
   colorschemes = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/colorschemes",
@@ -118,6 +123,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["happy_hacking.vim"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/happy_hacking.vim",
+    url = "https://github.com/YorickPeterse/happy_hacking.vim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -139,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -154,6 +174,11 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   spacecamp = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/spacecamp",
@@ -168,6 +193,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  vim = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/challenger-deep-theme/vim"
+  },
+  ["vim-deep-space"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim-deep-space",
+    url = "https://github.com/tyrannicaltoucan/vim-deep-space"
+  },
+  ["vim-moonfly-colors"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
   }
 }
 
@@ -177,5 +217,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end

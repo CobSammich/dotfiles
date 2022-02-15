@@ -38,6 +38,7 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
+vim.opt.background = "dark"
 --vim.opt.highlight:append "cursorline" -- = "cursorline",
 
 for k, v in pairs(options) do

@@ -65,7 +65,12 @@ return packer.startup(function(use)
   use "folke/tokyonight.nvim"
   use "jaredgorski/spacecamp" -- doesn't work with rounded borders
   use({ "catppuccin/nvim", as = "catppuccin" })
-
+  use "tyrannicaltoucan/vim-deep-space"
+  use "YorickPeterse/happy_hacking.vim"
+  use "sainnhe/sonokai"
+  use "challenger-deep-theme/vim"
+  use "bluz71/vim-moonfly-colors"
+  use {"adisen99/codeschool.nvim", requires = {"rktjmp/lush.nvim"}}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -90,10 +95,10 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
 
   -- Treesitter
-  -- use {
-    -- "nvim-treesitter/nvim-treesitter",
-    -- run = ":TSUpdate",
-  -- }
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
   -- use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
