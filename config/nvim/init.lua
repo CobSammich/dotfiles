@@ -8,3 +8,4 @@ require "user.plugins"
 require "user.cmp" -- completion
 require "user.lsp" -- this is a directory (searches for init.lua)
 require "user.treesitter"
+require "user.autopairs"
