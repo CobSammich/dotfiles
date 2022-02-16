@@ -13,4 +13,8 @@ configs.setup {
 
   },
   indent = { enable = true, disable = { "yaml", "lua" } },
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
 }
