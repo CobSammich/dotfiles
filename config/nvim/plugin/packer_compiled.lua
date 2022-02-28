@@ -219,6 +219,11 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
@@ -234,10 +239,20 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim-deep-space",
     url = "https://github.com/tyrannicaltoucan/vim-deep-space"
   },
+  ["vim-doge"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim-doge",
+    url = "https://github.com/kkoomen/vim-doge"
+  },
   ["vim-moonfly-colors"] = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
     url = "https://github.com/bluz71/vim-moonfly-colors"
+  },
+  ["vim-pydocstring"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim-pydocstring",
+    url = "https://github.com/heavenshell/vim-pydocstring"
   }
 }
 
