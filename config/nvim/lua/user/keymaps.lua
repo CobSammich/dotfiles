@@ -74,5 +74,6 @@ keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Pydocstring
-keymap("n", "<leader>d", ":Pydocstring<cr>", opts)
+-- keymap("n", "<leader>d", ":Pydocstring<cr>", opts)
+keymap("n", "<leader>d", ":DogeGenerate<cr>", opts)
 

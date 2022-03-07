@@ -59,7 +59,8 @@ return packer.startup(function(use)
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   -- use "folke/which-key.nvim"
   use "heavenshell/vim-pydocstring"
-  use "kkoomen/vim-doge"
+  use {"kkoomen/vim-doge",
+    run = ":call doge#install()"}
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -74,6 +75,7 @@ return packer.startup(function(use)
   use "bluz71/vim-moonfly-colors"
   use {"adisen99/codeschool.nvim", requires = {"rktjmp/lush.nvim"}}
   use "rebelot/kanagawa.nvim"
+  use "morhetz/gruvbox"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
