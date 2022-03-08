@@ -50,4 +50,27 @@ end
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions+=cro]] -- TODO: this doesn't seem to work
+-- vim.cmd [[filetype plugin indent on]] -- TODO: this doesn't seem to work
+vim.cmd [[let g:vimwiki_list = [{
+            \ 'path': '~/vimwiki',
+            \ 'template_path': '~/vimwiki/templates/',
+            \ 'template_default': 'default',
+            \ 'template_ext': '.html',
+            \ 'syntax': 'markdown',
+            \ 'ext': '.md',
+            \ 'path_html': '~/vimwiki/site_html/',
+            \ 'custom_wiki2html': 'vimwiki_markdown'}]
+        ]]
+
+-- '$HOME/Scripts/vimwiki2html.sh'
+vim.cmd [[let g:vimwiki_hl_headers = 1]]
+-- Don't allow all markdown files to be vimwiki files
+vim.cmd [[let g:vimwiki_global_ext = 0]]
+-- Use code syntax highlighitng within vimwiki pages.
+vim.cmd [[let g:markdown_fenced_languages = ['python', 'cpp', 'c', 'rust', 'vim',
+                                 \ 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript',
+                                 \ 'ruby', 'sass', 'xml', 'html']
+        ]]
+-- Disable hiding tick marks for code blocks -- default is 2 for vimwiki
+vim.cmd [[let g:vimwiki_conceallevel = 0]]
 

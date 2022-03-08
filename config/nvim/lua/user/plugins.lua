@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use "heavenshell/vim-pydocstring"
   use {"kkoomen/vim-doge",
     run = ":call doge#install()"}
+  use "vimwiki/vimwiki"
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
