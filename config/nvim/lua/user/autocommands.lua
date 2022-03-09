@@ -8,3 +8,6 @@ vim.api.nvim_command([[
 
     autocmd BufWritePre * call TrimWhiteSpace()
 ]])
+
+-- Vimiwki related
+vim.cmd [[au FileType vimwiki set syntax=pandoc]]
