@@ -77,6 +77,7 @@ return packer.startup(function(use)
   use {"adisen99/codeschool.nvim", requires = {"rktjmp/lush.nvim"}}
   use "rebelot/kanagawa.nvim"
   use "morhetz/gruvbox"
+  use 'navarasu/onedark.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
