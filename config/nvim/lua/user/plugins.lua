@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- use "goolord/alpha-nvim"
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   -- use "folke/which-key.nvim"
-  use "heavenshell/vim-pydocstring"
+  -- use "heavenshell/vim-pydocstring"
   use {"kkoomen/vim-doge",
     run = ":call doge#install()"}
   use "vimwiki/vimwiki"
@@ -110,6 +110,7 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "stevearc/aerial.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

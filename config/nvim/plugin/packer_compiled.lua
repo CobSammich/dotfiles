@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["aerial.nvim"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/aerial.nvim",
+    url = "https://github.com/stevearc/aerial.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -134,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   ["happy_hacking.vim"] = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/happy_hacking.vim",
@@ -188,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -249,10 +264,10 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
     url = "https://github.com/bluz71/vim-moonfly-colors"
   },
-  ["vim-pydocstring"] = {
+  vimwiki = {
     loaded = true,
-    path = "/home/cob/.local/share/nvim/site/pack/packer/start/vim-pydocstring",
-    url = "https://github.com/heavenshell/vim-pydocstring"
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 
