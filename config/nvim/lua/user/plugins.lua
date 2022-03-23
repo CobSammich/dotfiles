@@ -110,7 +110,11 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- tree and function display
   use "stevearc/aerial.nvim"
+  -- signature completion
+  use "ray-x/lsp_signature.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

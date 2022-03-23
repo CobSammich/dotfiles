@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/cob/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
   ["lush.nvim"] = {
     loaded = true,
     path = "/home/cob/.local/share/nvim/site/pack/packer/start/lush.nvim",
