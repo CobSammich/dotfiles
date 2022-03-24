@@ -96,7 +96,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   -- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -115,6 +115,10 @@ return packer.startup(function(use)
   use "stevearc/aerial.nvim"
   -- signature completion
   use "ray-x/lsp_signature.nvim"
+  -- dashboard showing previous projects open
+  use "ChristianChiarulli/dashboard-nvim"
+  -- use "junegunn/fzf.vim"
+  -- use "liuchengxu/vim-clap"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

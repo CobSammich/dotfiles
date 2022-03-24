@@ -77,3 +77,5 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- keymap("n", "<leader>d", ":Pydocstring<cr>", opts)
 keymap("n", "<leader>d", ":DogeGenerate<cr>", opts)
 
+keymap("n", "<Leader>ss", ":<C-u>SessionSave<CR>", opts)
+keymap("n", "<Leader>sl", ":<C-u>SessionLoad<CR>", opts)

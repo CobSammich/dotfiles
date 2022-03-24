@@ -74,3 +74,8 @@ vim.cmd [[let g:markdown_fenced_languages = ['python', 'cpp', 'c', 'rust', 'vim'
 -- Disable hiding tick marks for code blocks -- default is 2 for vimwiki
 vim.cmd [[let g:vimwiki_conceallevel = 0]]
 
+-- Dashboard
+vim.cmd [[let g:dashboard_default_executive='telescope']]
+-- vim.cmd [[let g:dashboard_preview_command='fortune']]
+
+
