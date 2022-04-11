@@ -242,6 +242,23 @@ bar {
 	}
 }
 
+bar {
+    output HDMI-1
+    font pango:Droid Sans Mono Nerd Font, FontAwesome 12
+	#status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    position top
+	colors {
+        separator          $purple
+        background         $darkgrey
+        statusline         $white
+#                          		border 		        bg		txt		indicator
+		focused_workspace	$mediumgrey	   	    $grey		$darkgrey	$purple
+		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
+		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
+		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
+	}
+}
+
 # i3-gaps
 ## Literally all of the configuration below comes from this source:
 ## https://lottalinuxlinks.com/how-to-build-and-install-i3-gaps-on-debian/
@@ -296,15 +313,18 @@ mode "$mode_gaps_outer" {
 ### Additional commands to run at startup
 # getting displays configured -- kinda hacked around at this to make it work
 #exec xrandr --output HDMI-0 --rotate left --auto --left-of DP-2 --pos 0x0 --output DP-2 --pos 1080x210 --primary
-exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output DP-2 --pos 1080x210 --primary
+## Two monitors
+# exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output DP-2 --pos 1080x210 --primary
+## Rob's cracked monitor
+exec xrandr --output HDMI-1 --auto --pos 0x840 --output HDMI-0 --rotate left --auto --pos 1920x0 --output DP-2 --pos 3000x240 --primary
 #exec xrandr
 # background -- feh primary/display/image.png secondary/display/image.png
 #exec feh --bg-max ~/Pictures/wallpapers/nighttime_rocket.jpg --bg-scale ~/Pictures/wallpapers/moonforest.jpg
 #exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/tranquility_by_gydw1n_ddysply.png' '/home/cob/Pictures/wallpapers/ddsha9h-d671ccfa-2648-4155-9ecd-8e00cf0bd95b.png'
-exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dc_spiderman.png' '/home/cob/Pictures/wallpapers/vertical/night.jpg'
+exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dc_spiderman.png' '/home/cob/Pictures/wallpapers/vertical/night.jpg' '/home/cob/Pictures/wallpapers/dc_spiderman.png'
 #exec feh --no-fehbg --bg-scale '43_by_gydw1n_darxvlp-pre.png' '/home/cob/Pictures/wallpapers/21_by_gydw1n_dac5tet-fullview.png'
 # Get Fan colors on -- OpenRGB needs to be running in the background to persistently keep the fan colors.
-exec sudo openrgb --startminimized
+# exec sudo openrgb --startminimized --profile MiamiVice.orp
 # --profile MiamiVice.orp
 # Allow bluetooth
 exec --no-startup-id pactl load-module module-bluetooth-policy
@@ -324,6 +344,7 @@ bindsym $mod+minus scratchpad show
 
 ### Set fixed width of Spotify and always open as floating
 for_window [title="Spotify"] floating enable, resize set 2000px 1200px
+for_window [title="Figure ?"] floating enable
 
 
 # Border style
