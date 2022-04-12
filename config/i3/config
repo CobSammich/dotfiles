@@ -315,9 +315,13 @@ mode "$mode_gaps_outer" {
 #exec xrandr --output HDMI-0 --rotate left --auto --left-of DP-2 --pos 0x0 --output DP-2 --pos 1080x210 --primary
 ## Two monitors
 # exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output DP-2 --pos 1080x210 --primary
-## Rob's cracked monitor
-exec xrandr --output HDMI-1 --auto --pos 0x840 --output HDMI-0 --rotate left --auto --pos 1920x0 --output DP-2 --pos 3000x240 --primary
-#exec xrandr
+## Rob's cracked monitor - on left side
+#exec xrandr --output HDMI-1 --auto --pos 0x840 --output HDMI-0 --rotate left --auto --pos 1920x0 --output DP-2 --pos 3000x240 --primary
+## Rob's cracked monitor - on right side
+exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output HDMI-1 --auto --pos 3640x600 --output DP-2 --pos 1080x240 --primary
+
+
+
 # background -- feh primary/display/image.png secondary/display/image.png
 #exec feh --bg-max ~/Pictures/wallpapers/nighttime_rocket.jpg --bg-scale ~/Pictures/wallpapers/moonforest.jpg
 #exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/tranquility_by_gydw1n_ddysply.png' '/home/cob/Pictures/wallpapers/ddsha9h-d671ccfa-2648-4155-9ecd-8e00cf0bd95b.png'
