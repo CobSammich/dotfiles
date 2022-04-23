@@ -329,6 +329,7 @@ exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dc_spiderman.png' 
 #exec feh --no-fehbg --bg-scale '43_by_gydw1n_darxvlp-pre.png' '/home/cob/Pictures/wallpapers/21_by_gydw1n_dac5tet-fullview.png'
 # Get Fan colors on -- OpenRGB needs to be running in the background to persistently keep the fan colors.
 # exec sudo openrgb --startminimized --profile MiamiVice.orp
+exec sudo /home/cob/Applications/OpenRGB_0.7_x86_64_6128731.AppImage --startminimized --profile MiamiVice.orp
 # --profile MiamiVice.orp
 # Allow bluetooth
 exec --no-startup-id pactl load-module module-bluetooth-policy
