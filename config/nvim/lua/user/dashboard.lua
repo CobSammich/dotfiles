@@ -26,6 +26,7 @@ augroup dashboard_au
 augroup END
 ]]
 
+vim.cmd [[nmap <Leader>ss :<C-u>SessionSave<CR>]]
 -- g.dashboard_preview_command = 'cat'
 -- g.dashboard_preview_pipeline = 'lolcat'
 -- g.dashboard_preview_file = "~/.config/nvim/neovim_ascii.txt"
