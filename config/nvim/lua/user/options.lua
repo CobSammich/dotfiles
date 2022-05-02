@@ -35,7 +35,8 @@ local options = {
     guifont = "monospace:h17",               -- the font used in graphical neovim applications
     virtualedit = "all",
     -- highlight = "cursorline",
-    textwidth = 100
+    textwidth = 100,
+    laststatus = 3                           -- global statusline
 }
 
 vim.opt.shortmess:append "c"
