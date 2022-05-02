@@ -119,6 +119,8 @@ return packer.startup(function(use)
   use "ChristianChiarulli/dashboard-nvim"
   -- use "junegunn/fzf.vim"
   -- use "liuchengxu/vim-clap"
+  -- status line
+  use "nvim-lualine/lualine.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
