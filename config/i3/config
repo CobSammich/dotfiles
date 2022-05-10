@@ -262,7 +262,7 @@ bar {
 # i3-gaps
 ## Literally all of the configuration below comes from this source:
 ## https://lottalinuxlinks.com/how-to-build-and-install-i3-gaps-on-debian/
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 gaps inner 2
 gaps outer 0
 bindsym $mod+Shift+g gaps inner all set 2; gaps outer all set 0
