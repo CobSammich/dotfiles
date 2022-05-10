@@ -54,6 +54,9 @@ warning = 20.0
 alert = 10.0
 [block.theme_overrides]
 idle_bg = "#f0d50c"
+info_bg = "#f0d50c"
+good_bg = "#f0d50c"
+warning_bg = "#f0d50c"
 
 [[block]]
 block = "memory"
