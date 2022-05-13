@@ -5,7 +5,7 @@ import random
 import os
 
 
-files = glob.glob("/home/cob/Pictures/wallpapers/*")
+files = glob.glob("/home/cob/Pictures/wallpapers/*.*")
 files_vert = glob.glob("/home/cob/Pictures/wallpapers/vertical/*")
 
 random.shuffle(files)
