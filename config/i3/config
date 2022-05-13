@@ -459,3 +459,5 @@ client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
 	#}
 #}
 
+# call python script to change backgrounds
+bindsym F12 exec python $HOME/.config/scripts/change_wallpaper.py
