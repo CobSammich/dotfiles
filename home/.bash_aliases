@@ -8,6 +8,7 @@ alias egrep='egrep --color=auto'
 
 # easy show all ls commmand
 alias lsa="ls -alh"
+alias lsl="ls -lh"
 
 # return the size of a directory
 size() {
@@ -28,9 +29,10 @@ CYAN="\[\033[0;36m\]"
 export PS1="$RED[\t] $YELLOW\u$GREEN@$BLUE\h:$CYAN\W$PURPLE$ $NORMAL"
 
 ## Programs
-alias discord="/home/cob/Applications/Discord/Discord"
+#alias discord="/home/cob/Applications/Discord/Discord"
 #alias spt="snap run spt" ## Debian
 alias spt="$HOME/Applications/spt" ## Arch
+alias openrgb="sudo /home/cob/Applications/OpenRGB_0.7_x86_64_6128731.AppImage"
 # watch the devices connected to my network
 alias show_network_devices="watch -n 5 $HOME/.config/scripts/show_network_devices.sh"
 alias latex_clean="$HOME/.config/scripts/latex_clean.sh"
