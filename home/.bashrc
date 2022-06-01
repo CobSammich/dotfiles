@@ -42,6 +42,10 @@ HISTFILESIZE=20000
 # include snap installed programs in path
 export PATH="$PATH:/snap/bin/"
 
+# Define neovim as default editor for ranger
+export VISUAL=nvim;
+export EDITOR=nvim;
+
 ## run program at bash start
 #fortune -a computers
 neofetch #| lolcat
