@@ -351,7 +351,10 @@ bindsym $mod+minus scratchpad show
 ### Set fixed width of Spotify and always open as floating
 for_window [title="Spotify"] floating enable, resize set 2000px 1200px
 for_window [title="Thunar"] floating enable, resize set 1200px 700px
+# Float matplotlib windows
 for_window [title="Figure ?"] floating enable
+# Float xfce4-terminal
+for_window [class="Xfce4-terminal"] floating enable
 
 
 # Border style
