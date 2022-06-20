@@ -1,3 +1,7 @@
+local function getWords()
+    return tostring(vim.fn.wordcount().words) .. " words"
+end
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -15,7 +19,7 @@ require('lualine').setup {
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress','location'},
+    lualine_y = {getWords, 'progress','location'},
     lualine_z = {'hostname'}
   },
   inactive_sections = {
@@ -29,3 +33,4 @@ require('lualine').setup {
   tabline = {},
   extensions = {}
 }
+

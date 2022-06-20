@@ -30,6 +30,9 @@ require('onedark').setup {
     -- Custom Highlights --
     colors = {}, -- Override default colors
     highlights = {}, -- Override highlight groups
+    integrations = {
+        bufferline = false,
+    },
 
     -- Plugins Config --
     diagnostics = {

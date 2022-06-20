@@ -79,6 +79,7 @@ return packer.startup(function(use)
   use "morhetz/gruvbox"
   use 'navarasu/onedark.nvim'
 
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -117,10 +118,12 @@ return packer.startup(function(use)
   use "ray-x/lsp_signature.nvim"
   -- dashboard showing previous projects open
   use "ChristianChiarulli/dashboard-nvim"
-  -- use "junegunn/fzf.vim"
-  -- use "liuchengxu/vim-clap"
+
   -- status line
   use "nvim-lualine/lualine.nvim"
+
+  -- Buffers
+  use "akinsho/bufferline.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
