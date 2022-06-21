@@ -79,3 +79,6 @@ keymap("n", "<leader>d", ":DogeGenerate<cr>", opts)
 
 keymap("n", "<Leader>ss", ":<C-u>SessionSave<CR>", opts)
 keymap("n", "<Leader>sl", ":<C-u>SessionLoad<CR>", opts)
+
+-- Spell checking
+keymap("n", "<Leader>s", ":setlocal spell! spelllang=en_us<CR>", opts)

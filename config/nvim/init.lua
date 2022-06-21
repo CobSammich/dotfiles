@@ -20,3 +20,7 @@ require "user.aerial"
 require "user.dashboard"
 require "user.lualine"
 require "user.bufferline"
+
+require "user.custom_colors"
+
+
