@@ -341,6 +341,9 @@ exec unclutter
 #exec compton --config $HOME/.config/compton/compton.conf
 exec picom --config $HOME/.config/picom.conf
 
+# Turn off monitors sleeping
+exec xset s off -dpms
+
 ### Additional Aliases
 # Moving workspaces between screens
 bindsym $mod+p move workspace to output right
