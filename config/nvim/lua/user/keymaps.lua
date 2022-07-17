@@ -82,3 +82,6 @@ keymap("n", "<Leader>sl", ":<C-u>SessionLoad<CR>", opts)
 
 -- Spell checking
 keymap("n", "<Leader>s", ":setlocal spell! spelllang=en_us<CR>", opts)
+
+keymap("n", "<C-d>", "oipdb.set_trace()<ESC>", opts)
+
