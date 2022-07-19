@@ -326,8 +326,11 @@ exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output HDMI-1 --aut
 #exec feh --bg-max ~/Pictures/wallpapers/nighttime_rocket.jpg --bg-scale ~/Pictures/wallpapers/moonforest.jpg
 #exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/tranquility_by_gydw1n_ddysply.png' '/home/cob/Pictures/wallpapers/ddsha9h-d671ccfa-2648-4155-9ecd-8e00cf0bd95b.png'
 #exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dc_spiderman.png' '/home/cob/Pictures/wallpapers/vertical/night.jpg' '/home/cob/Pictures/wallpapers/dc_spiderman.png'
-exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/LA_sunset.png' '/home/cob/Pictures/wallpapers/cherry-blossom-blue-pink.jpg'
+#exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/LA_sunset.png' '/home/cob/Pictures/wallpapers/cherry-blossom-blue-pink.jpg'
+#exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/LA_sunset.png' '/home/cob/Pictures/wallpapers/wallpaperflare.com_wallpaper.jpg'
 #exec feh --no-fehbg --bg-scale '43_by_gydw1n_darxvlp-pre.png' '/home/cob/Pictures/wallpapers/21_by_gydw1n_dac5tet-fullview.png'
+exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/pink_gradient.jpg' '/home/cob/Pictures/wallpapers/everblush_ign_astronaut.png'
+
 # Get Fan colors on -- OpenRGB needs to be running in the background to persistently keep the fan colors.
 # exec sudo openrgb --startminimized --profile MiamiVice.orp
 exec sudo /home/cob/Applications/OpenRGB_0.7_x86_64_6128731.AppImage --startminimized --profile MiamiVice.orp
