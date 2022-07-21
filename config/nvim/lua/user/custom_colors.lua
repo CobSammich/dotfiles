@@ -5,5 +5,5 @@ vim.cmd[[hi clear SpellCap]]
 vim.cmd[[hi SpellCap cterm=underline gui=undercurl ctermfg=lightred guisp=lightred guifg=orange]]
 
 -- Honestly not sure what these are.. but they highlight actual words
-vim.cmd[[hi clear SpellLocal]]
-vim.cmd[[hi clear SpellRare]]
+-- vim.cmd[[hi clear SpellLocal]]
+-- vim.cmd[[hi clear SpellRare]]

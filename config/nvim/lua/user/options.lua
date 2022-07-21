@@ -79,4 +79,12 @@ vim.cmd [[let g:vimwiki_conceallevel = 0]]
 vim.cmd [[let g:dashboard_default_executive='telescope']]
 -- vim.cmd [[let g:dashboard_preview_command='fortune']]
 
+-- vim.cmd [[set foldmethod=expr]]
+-- vim.cmd [[set foldexpr=nvim_treesitter#fold_expr()]]
+
+-- vim.cmd [[set foldenable]]
+-- vim.cmd [[set foldlevelstart=10]]
+-- vim.cmd [[set foldnestmax=10]]
+-- vim.cmd [[set foldmethod=syntax]]
+-- vim.cmd [[nnoremap <space> za]]
 
