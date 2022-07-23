@@ -2,3 +2,9 @@
 
 # Don't complain about single character variable names
 good-names=i, j, f, df, dx, dy, x1, x2, y1, y2, e, x, y, fig, ax, t0, t1, r, c
+
+[TYPECHECK]
+
+# List of members which are set dynamically and missed by Pylint inference
+# system, and so shouldn't trigger E1101 when accessed.
+generated-members=numpy.*, torch.*
