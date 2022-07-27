@@ -76,8 +76,12 @@ return packer.startup(function(use)
   use "bluz71/vim-moonfly-colors"
   use {"adisen99/codeschool.nvim", requires = {"rktjmp/lush.nvim"}}
   use "rebelot/kanagawa.nvim"
-  use "morhetz/gruvbox"
-  use 'navarasu/onedark.nvim'
+  -- use "morhetz/gruvbox"
+  use "ellisonleao/gruvbox.nvim"
+  use "navarasu/onedark.nvim"
+  -- use "joshdick/onedark.vim"
+  use "NLKNguyen/papercolor-theme"
+  use 'Mofiqul/dracula.nvim'
 
 
   -- cmp plugins
