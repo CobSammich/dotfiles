@@ -64,7 +64,6 @@ return packer.startup(function(use)
   use "vimwiki/vimwiki"
 
   -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
   use "jaredgorski/spacecamp" -- doesn't work with rounded borders
