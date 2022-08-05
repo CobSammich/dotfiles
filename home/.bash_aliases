@@ -44,11 +44,13 @@ alias ipython="$HOME/.local/bin/ipython"
 ## System suspension
 alias suspend='systemctl suspend'
 
+## Copy
+alias pbcopy="xsel --clipboard --input"
+alias pbpaste="xsel --clipboard --output"
+
 ## syntax highlighting within ranger
 export HIGHLIGHT_STYLE=moria
 
-## cli programs with lolcat using
-#alias neofetch="neofetch | lolcat"
 # Navigation
 alias school="cd ~/Documents/OMSCS/"
 alias vconfig="cd ~/dotfiles/config/nvim/"
