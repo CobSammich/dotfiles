@@ -49,3 +49,7 @@ export HIGHLIGHT_STYLE=moria
 
 ## cli programs with lolcat using
 #alias neofetch="neofetch | lolcat"
+# Navigation
+alias school="cd ~/Documents/OMSCS/"
+alias vconfig="cd ~/dotfiles/config/nvim/"
+alias dots="cd ~/dotfiles"
