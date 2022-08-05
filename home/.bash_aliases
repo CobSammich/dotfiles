@@ -52,6 +52,6 @@ alias pbpaste="xsel --clipboard --output"
 export HIGHLIGHT_STYLE=moria
 
 # Navigation
-alias gtschool="cd ~/Documents/OMSCS/"
-alias gtvim="cd ~/dotfiles/config/nvim/"
-alias gtdots="cd ~/dotfiles"
+alias goto_school="cd ~/Documents/OMSCS/"
+alias goto_vim="cd ~/dotfiles/config/nvim/"
+alias goto_dots="cd ~/dotfiles"
