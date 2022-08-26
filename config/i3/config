@@ -318,7 +318,8 @@ mode "$mode_gaps_outer" {
 ## Rob's cracked monitor - on left side
 #exec xrandr --output HDMI-1 --auto --pos 0x840 --output HDMI-0 --rotate left --auto --pos 1920x0 --output DP-2 --pos 3000x240 --primary
 ## Rob's cracked monitor - on right side
-exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output HDMI-1 --auto --pos 3640x600 --output DP-2 --pos 1080x240 --primary
+#exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output HDMI-1 --auto --pos 3640x600 --output DP-2 --pos 1080x240 --primary
+exec xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --rotate left --auto --pos 0x0 --output HDMI-1 --auto --pos 3640x600 --output DP-2 --pos 1080x240 --primary
 
 
 
