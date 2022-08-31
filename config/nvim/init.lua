@@ -1,7 +1,6 @@
 require "user.options"
 require "user.keymaps"
 require "user.autocommands"
-require "user.colorscheme"
 
 -- Plugin related
 require "user.plugins"
@@ -24,3 +23,4 @@ require "user.bufferline"
 require "user.custom_colors"
 
 
+require "user.colorscheme"

@@ -88,3 +88,14 @@ vim.cmd [[let g:dashboard_default_executive='telescope']]
 -- vim.cmd [[set foldmethod=syntax]]
 -- vim.cmd [[nnoremap <space> za]]
 
+
+-- For vim-table-mode
+-- vim.cmd [[let g:table_mode_header_fillchar='=']]
+-- vim.cmd [[let g:table_mode_corner_corner='+']]
+
+
+vim.cmd [[set foldtext=getline(v:foldstart+1)]]
+vim.cmd [[set foldopen-=block]]
+-- vim.cmd [[autocmd FileType python setlocal foldenable foldmethod=syntax]]
+
+
