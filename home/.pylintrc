@@ -1,7 +1,7 @@
 [BASIC]
 
 # Don't complain about single character variable names
-good-names=i, j, f, df, dx, dy, x1, x2, y1, y2, e, x, y, fig, ax, t0, t1, r, c, g, h
+good-names=i, j, f, df, dx, dy, x1, x2, y1, y2, e, x, y, z, fig, ax, t0, t1, r, c, g, h, xs, ys, zs
 
 [TYPECHECK]
 
