@@ -21,7 +21,7 @@ require("aerial").setup({
   --   auto    - aerial window will stay open as long as there is a visible
   --             buffer to attach to
   --   global  - same as 'persist', and will always show symbols for the current buffer
-  close_behavior = "global",
+  -- close_behavior = "global",
 
   -- Set to false to remove the default keybindings for the aerial buffer
   default_bindings = true,
@@ -145,6 +145,7 @@ require("aerial").setup({
 
   -- Call this function when aerial attaches to a buffer.
   -- Useful for setting keymaps. Takes a single `bufnr` argument.
+  attach_mode = "global",
 
   -- Automatically open aerial when entering supported buffers.
   -- This can be a function (see :help aerial-open-automatic)
