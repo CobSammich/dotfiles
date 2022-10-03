@@ -15,12 +15,13 @@ require "user.toggleterm"
 require "user.pydocstring"
 require "user.vim-doge"
 require "user.aerial"
--- require "user.lsp-signature"
 require "user.dashboard"
 require "user.lualine"
 require "user.bufferline"
 
-require "user.custom_colors"
-
 
 require "user.colorscheme"
+
+require "user.custom_colors"
+
+-- require "user.lsp-signature"

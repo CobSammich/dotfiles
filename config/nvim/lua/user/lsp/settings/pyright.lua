@@ -8,7 +8,7 @@ return {
       analysis = {
         typeCheckingMode = "off",
         diagnosticSeverityOverrides = "none"
-      }
+      },
     }
   },
 }

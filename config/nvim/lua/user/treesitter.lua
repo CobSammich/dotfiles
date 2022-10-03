@@ -17,4 +17,8 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
+  pyfold = {
+    enable = true,
+    custom_foldtext = true -- Sets provided foldtext on window where module is active
+  }
 }
