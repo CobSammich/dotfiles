@@ -48,7 +48,7 @@ export EDITOR=nvim;
 
 ## run program at bash start
 #fortune -a computers
-neofetch #| lolcat
+#neofetch #| lolcat
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
