@@ -30,7 +30,6 @@ require("aerial").setup({
   -- Determines the default direction to open the aerial window. The 'prefer'
   -- options will open the window in the other direction *if* there is a
   -- different buffer in the way of the preferred direction
-  default_direction = "prefer_right",
 
   -- Disable aerial on files with this many lines
   disable_max_lines = 10000,
@@ -51,6 +50,16 @@ require("aerial").setup({
   --   "Struct",
   --   "Variable",
   -- },
+  filter_kind = {
+    "Class",
+    "Constructor",
+    -- "Enum",
+    "Function",
+    --"Interface",
+    -- "Module",
+    "Method",
+    -- "Struct",
+  },
 
   -- Enum: split_width, full_width, last, none
   -- Determines line highlighting mode when multiple splits are visible.
@@ -121,7 +130,7 @@ require("aerial").setup({
 
   -- When you fold code with za, zo, or zc, update the aerial tree as well.
   -- Only works when manage_folds = true
-  link_folds_to_tree = false,
+  link_folds_to_tree = true,
 
   -- Fold code when you open/collapse symbols in the tree.
   -- Only works when manage_folds = true
@@ -135,9 +144,13 @@ require("aerial").setup({
   -- They can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
   -- min_width and max_width can be a list of mixed types.
   -- max_width = {40, 0.2} means "the lesser of 40 columns or 20% of total"
-  max_width = { 40, 0.2 },
-  width = 25,
-  min_width = 10,
+  layout = {
+      placement = "edge",
+      default_direction = "prefer_right",
+      max_width = { 40, 0.2 },
+      width = 25,
+      min_width = 10,
+  },
 
   -- Set default symbol icons to use patched font icons (see https://www.nerdfonts.com/)
   -- "auto" will set it to true if nvim-web-devicons or lspkind-nvim is installed.
@@ -153,7 +166,7 @@ require("aerial").setup({
 
   -- Set to true to only open aerial at the far right/left of the editor
   -- Default behavior opens aerial relative to current window
-  placement_editor_edge = false,
+  --placement_editor_edge = false,
 
   -- Run this command after jumping to a symbol (false will disable)
   post_jump_cmd = "normal! zz",

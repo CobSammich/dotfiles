@@ -61,8 +61,8 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope
-keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Terminal --
 -- Better terminal navigation
@@ -84,4 +84,5 @@ keymap("n", "<Leader>sl", ":<C-u>SessionLoad<CR>", opts)
 keymap("n", "<Leader>s", ":setlocal spell! spelllang=en_us<CR>", opts)
 
 keymap("n", "<C-d>", "oipdb.set_trace()<ESC>", opts)
+keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 
