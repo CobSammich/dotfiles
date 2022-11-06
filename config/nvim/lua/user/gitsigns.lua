@@ -78,8 +78,8 @@ gitsigns.setup {
         map('n', '<leader>gb', function() gs.blame_line { full = true } end)
         --map('n', '<leader>tb', gs.toggle_current_line_blame)
         map('n', '<leader>gd', gs.diffthis)
-        map('n', '<leader>gn', gs.next_hunk)
-        map('n', '<leader>gp', gs.prev_hunk)
+        map('n', '<leader>gj', gs.next_hunk)
+        map('n', '<leader>gk', gs.prev_hunk)
         map('n', '<leader>gl', gs.toggle_numhl)
         --map('n', '<leader>td', gs.toggle_deleted)
 
