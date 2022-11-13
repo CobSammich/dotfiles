@@ -87,3 +87,8 @@ keymap("n", "<C-d>", "oipdb.set_trace()<ESC>", opts)
 keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 keymap("n", "]", ":AerialNext<CR>", opts)
 keymap("n", "[", ":AerialPrev<CR>", opts)
+
+keymap("n", "L", "<cmd>BufferLineCycleNext<CR>", opts)
+keymap("n", "H", "<cmd>BufferLineCyclePrev<CR>", opts)
+keymap("n", "<leader>ll", "<cmd>BufferLineMoveNext<CR>", opts)
+keymap("n", "<leader>hh", "<cmd>BufferLineMovePrev<CR>", opts)
