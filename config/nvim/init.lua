@@ -1,28 +1,30 @@
-require "user.options"
-require "user.keymaps"
-require "user.autocommands"
+require("impatient")
+require("user.core.options")
+require("user.core.keymaps")
+require("user.core.autocommands")
 
 -- Plugin related
-require "user.plugins"
-require "user.cmp" -- completion
-require "user.lsp" -- this is a directory (searches for init.lua)
-require "user.treesitter"
-require "user.autopairs"
-require "user.comment"
-require "user.gitsigns"
-require "user.nvim-tree"
-require "user.toggleterm"
-require "user.pydocstring"
-require "user.vim-doge"
-require "user.aerial"
-require "user.dashboard"
-require "user.lualine"
-require "user.bufferline"
-require "user.indent-line"
+require("user.plugins.plugins")
+require("user.plugins.cmp") -- completion
+require("user.plugins.treesitter")
+require("user.plugins.autopairs")
+require("user.plugins.comment")
+require("user.plugins.gitsigns")
+require("user.plugins.nvim-tree")
+require("user.plugins.toggleterm")
+require("user.plugins.pydocstring")
+require("user.plugins.vim-doge")
+require("user.plugins.aerial")
+require("user.plugins.dashboard")
+require("user.plugins.lualine")
+require("user.plugins.bufferline")
+require("user.plugins.indent-line")
+require("user.plugins.iron")
 
 
-require "user.colorscheme"
+-- LSP related
+require("user.lsp") -- this is a directory (searches for init.lua)
 
-require "user.custom_colors"
-
--- require "user.lsp-signature"
+-- Colors
+require("user.core.colorscheme")
+require("user.core.custom_colors")

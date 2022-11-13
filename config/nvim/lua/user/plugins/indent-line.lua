@@ -9,6 +9,7 @@ function M.config()
                 "terminal",
                 "lsp-installer",
                 "lspinfo",
+                "dashboard",
             },
             filetype_exclude = {
                 "help",

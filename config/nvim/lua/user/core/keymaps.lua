@@ -85,4 +85,5 @@ keymap("n", "<Leader>s", ":setlocal spell! spelllang=en_us<CR>", opts)
 
 keymap("n", "<C-d>", "oipdb.set_trace()<ESC>", opts)
 keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-
+keymap("n", "]", ":AerialNext<CR>", opts)
+keymap("n", "[", ":AerialPrev<CR>", opts)
