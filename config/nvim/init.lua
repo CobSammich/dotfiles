@@ -20,6 +20,7 @@ require("user.plugins.lualine")
 require("user.plugins.bufferline")
 require("user.plugins.indent-line")
 require("user.plugins.iron")
+require("user.plugins.project")
 
 
 -- LSP related

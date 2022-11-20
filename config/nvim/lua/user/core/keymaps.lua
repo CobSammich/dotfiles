@@ -92,3 +92,5 @@ keymap("n", "L", "<cmd>BufferLineCycleNext<CR>", opts)
 keymap("n", "H", "<cmd>BufferLineCyclePrev<CR>", opts)
 keymap("n", "<leader>ll", "<cmd>BufferLineMoveNext<CR>", opts)
 keymap("n", "<leader>hh", "<cmd>BufferLineMovePrev<CR>", opts)
+
+keymap("i", "kj", "<ESC>", opts)
