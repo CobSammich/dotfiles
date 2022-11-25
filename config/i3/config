@@ -43,7 +43,8 @@ floating_modifier $mod
 
 # start a terminal -- use script to open in pwd
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec $HOME/.config/scripts/i3_shell.sh
+#bindsym $mod+Return exec $HOME/.config/scripts/i3_shell.sh
+bindsym $mod+n exec $HOME/.config/scripts/i3_shell.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -432,7 +433,7 @@ set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
+client.focused		    $lightblue	$darkblue	$white		$purple		$bpink
 client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
 client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
 client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
