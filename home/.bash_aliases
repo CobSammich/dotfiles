@@ -38,6 +38,7 @@ alias openrgb="sudo /home/cob/Applications/OpenRGB_0.7_x86_64_6128731.AppImage"
 alias show_network_devices="watch -n 5 $HOME/.config/scripts/show_network_devices.sh"
 alias latex_clean="$HOME/.config/scripts/latex_clean.sh"
 alias publish_site="$HOME/.config/scripts/publish_site.sh"
+alias toggle_monitors="$HOME/.config/scripts/toggle_multiple_monitors.sh"
 # Run the nba-scores-cli program I developed
 alias nba="~/Coding/projects/nba-scores-cli/target/release/nba-scores-cli"
 

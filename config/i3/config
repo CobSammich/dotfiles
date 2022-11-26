@@ -430,6 +430,7 @@ set $darkgrey		#383c4a
 set $grey		#b0b5bd
 set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
+set $bpink      #F273BC
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
