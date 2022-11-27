@@ -7,7 +7,7 @@ if [[ $1 == 1 ]]; then
     feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/space_station.png'
 elif [[ $1 == 2 ]]; then
     # 2 monitors
-    xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --rotate left --auto --pos 0x0 --output DP-2 --pos 1080x240 --primary
+    xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --rotate left --auto --pos 0x0 --output DP-2 --pos 1080x240 --primary --output HDMI-1 --off
     feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/purple_gradient.jpg'
 elif [[ $1 == 3 ]]; then
     # 3 monitors
