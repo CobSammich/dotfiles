@@ -61,7 +61,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>d", ":DogeGenerate<cr>", opts)
 
 -- Spell checking
-keymap("n", "<Leader>s", ":setlocal spell! spelllang=en_us<CR>", opts)
+keymap("n", "<Leader>sc", ":setlocal spell! spelllang=en_us<CR>", opts)
 
 keymap("n", "<C-d>", "oipdb.set_trace()<ESC>", opts)
 
