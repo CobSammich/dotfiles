@@ -1,31 +1,22 @@
-require("impatient")
-require("user.core.options")
-require("user.core.keymaps")
-require("user.core.autocommands")
+require "core.options"
+require "core.keymaps"
+require "core.autocommands"
 
--- Plugin related
-require("user.plugins.plugins")
-require("user.plugins.cmp") -- completion
-require("user.plugins.treesitter")
-require("user.plugins.autopairs")
-require("user.plugins.comment")
-require("user.plugins.gitsigns")
-require("user.plugins.nvim-tree")
-require("user.plugins.toggleterm")
-require("user.plugins.pydocstring")
-require("user.plugins.vim-doge")
-require("user.plugins.aerial")
-require("user.plugins.dashboard")
-require("user.plugins.lualine")
-require("user.plugins.bufferline")
-require("user.plugins.indent-line")
-require("user.plugins.iron")
-require("user.plugins.project")
+require "plugins.packer"
+require "plugins.bufferline"
+require "plugins.nvim-tree"
+require "plugins.lualine"
+require "plugins.indent_blankline"
+require "plugins.gitsigns"
+require "plugins.telescope"
+require "plugins.treesitter"
+require "plugins.cmp"
+require "plugins.project"
+require "plugins.aerial"
+require "plugins.vim-doge"
 
+require "lsp.lsp"
 
--- LSP related
-require("user.lsp") -- this is a directory (searches for init.lua)
-
--- Colors
-require("user.core.colorscheme")
-require("user.core.custom_colors")
+-- Single line setups:
+require('Comment').setup()
+require('fidget').setup()

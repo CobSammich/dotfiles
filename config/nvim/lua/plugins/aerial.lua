@@ -1,3 +1,4 @@
+
 require("aerial").setup({
   on_attach = function(bufnr)
     -- Toggle the aerial window with <leader>a

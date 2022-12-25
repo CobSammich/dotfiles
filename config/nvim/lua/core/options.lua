@@ -1,3 +1,41 @@
+-- [[ Setting options ]]
+-- See `:help vim.o`
+vim.o.virtualedit = "all"
+vim.o.wrap = false
+vim.o.cursorline = true
+
+-- Set highlight on search
+vim.o.hlsearch = true
+
+-- Make line numbers default
+vim.wo.number = true
+
+-- Enable mouse mode
+vim.o.mouse = 'a'
+
+-- Enable break indent
+vim.o.breakindent = true
+
+-- Save undo history
+vim.o.undofile = true
+
+-- Case insensitive searching UNLESS /C or capital in search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+-- Decrease update time
+vim.o.updatetime = 250
+vim.wo.signcolumn = 'yes'
+
+-- Set colorscheme
+vim.o.termguicolors = true
+vim.cmd [[colorscheme onedark]]
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
+vim.o.termguicolors = true
+
+
 local options = {
     backup = false,                          -- creates a backup file
     clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
@@ -48,10 +86,9 @@ for k, v in pairs(options) do
     vim.opt[k] = v
 end
 
--- vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions+=cro]] -- TODO: this doesn't seem to work
--- vim.cmd [[filetype plugin indent on]] -- TODO: this doesn't seem to work
+vim.cmd [[set foldtext=getline(v:foldstart+1)]]
+vim.cmd [[set foldopen-=block]]
+
 vim.cmd [[let g:vimwiki_list = [{
             \ 'path': '~/vimwiki',
             \ 'template_path': '~/vimwiki/templates/',
@@ -74,28 +111,4 @@ vim.cmd [[let g:markdown_fenced_languages = ['python', 'cpp', 'c', 'rust', 'vim'
         ]]
 -- Disable hiding tick marks for code blocks -- default is 2 for vimwiki
 vim.cmd [[let g:vimwiki_conceallevel = 0]]
-
--- Dashboard
-vim.cmd [[let g:dashboard_default_executive='telescope']]
--- vim.cmd [[let g:dashboard_preview_command='fortune']]
-
--- vim.cmd [[set foldmethod=expr]]
--- vim.cmd [[set foldexpr=nvim_treesitter#fold_expr()]]
-
--- vim.cmd [[set foldenable]]
--- vim.cmd [[set foldlevelstart=10]]
--- vim.cmd [[set foldnestmax=10]]
--- vim.cmd [[set foldmethod=syntax]]
--- vim.cmd [[nnoremap <space> za]]
-
-
--- For vim-table-mode
--- vim.cmd [[let g:table_mode_header_fillchar='=']]
--- vim.cmd [[let g:table_mode_corner_corner='+']]
-
-
-vim.cmd [[set foldtext=getline(v:foldstart+1)]]
-vim.cmd [[set foldopen-=block]]
--- vim.cmd [[autocmd FileType python setlocal foldenable foldmethod=syntax]]
-
 

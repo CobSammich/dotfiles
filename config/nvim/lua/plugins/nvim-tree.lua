@@ -88,7 +88,11 @@ nvim_tree.setup {
         },
       }
     }
-  }
+  },
+
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
+
   -- quit_on_open = 0,
   -- git_hl = 1,
   -- disable_window_picker = 0,

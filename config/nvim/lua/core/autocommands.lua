@@ -1,3 +1,15 @@
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+
 --- Autocommand to remove whitespace on file save
 vim.api.nvim_command([[
     function! TrimWhiteSpace()
@@ -15,10 +27,3 @@ vim.cmd([[au FileType vimwiki set syntax=pandoc]])
 
 -- vim.cmd [[set foldtext=getline(v:foldstart+1)]]
 vim.cmd([[autocmd FileType python setlocal foldenable foldmethod=syntax]])
-
--- skeletons
-vim.api.nvim_create_autocmd("BufNewFile", {
-    pattern = "*.py",
-    group = vim.api.nvim_create_augroup("create_skeletons", { clear = true }),
-    command = "0r ~/.config/nvim/templates/skeleton.py"
-})
