@@ -30,7 +30,8 @@ vim.cmd([[autocmd FileType python setlocal foldenable foldmethod=syntax]])
 
 
 local vimwiki_template = function()
-    vim.cmd([[0r ~/.config/nvim/templates/vimwiki_daily_journal.md]])
+    --vim.cmd([[0r ~/.config/nvim/templates/vimwiki_daily_journal.md]])
+    vim.cmd([[0r ~/vimwiki/templates/daily_journal_template.md]])
     -- vim.cmd([[call append(2, "# " . split(expand('%:r'),'/')[-1])]])
     -- vim.cmd([[call append(2, strftime("# %F"))]])
     vim.cmd([[call append(2, strftime("## %A, %B %d %G (%r)"))]])
