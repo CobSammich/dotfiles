@@ -28,19 +28,38 @@ vim.cmd([[au FileType vimwiki set syntax=pandoc]])
 vim.cmd([[autocmd FileType python setlocal foldenable foldmethod=syntax]])
 
 
-
+---------------------
+----- TEMPLATES -----
+---------------------
+-- All notes template
 local vimwiki_template = function()
-    --vim.cmd([[0r ~/.config/nvim/templates/vimwiki_daily_journal.md]])
+    local filename = vim.fn.expand("%:p")
+    -- Check if we are in the daily notes subdir, if we are then don't use this
+    -- template.
+    if string.find(filename, "/home/cob/vimwiki/diary/") then
+        return
+    end
+    vim.cmd([[0r ~/vimwiki/templates/default_template.md]])
+    vim.cmd([[:%s/{date}/\=strftime("%A, %B %d %G")]])
+    vim.cmd([[:%s/{time}/\=strftime("%r")]])
+end
+-- Daily journal template
+local vimwiki_daily_journal_template = function()
     vim.cmd([[0r ~/vimwiki/templates/daily_journal_template.md]])
-    -- vim.cmd([[call append(2, "# " . split(expand('%:r'),'/')[-1])]])
-    -- vim.cmd([[call append(2, strftime("# %F"))]])
-    vim.cmd([[call append(2, strftime("## %A, %B %d %G (%r)"))]])
-
+    vim.cmd([[:%s/{date}/\=strftime("%A, %B %d %G")]])
+    vim.cmd([[:%s/{time}/\=strftime("%r")]])
 end
 
--- skeletons
+
 vim.api.nvim_create_autocmd("BufNewFile", {
-    pattern = "/home/cob/vimwiki/diary/*.md",
-    group = vim.api.nvim_create_augroup("create_skeletons", { clear = true }),
+    pattern = "/home/cob/vimwiki/*.md",
+    group = vim.api.nvim_create_augroup("basic_template", { clear = true }),
     callback = vimwiki_template
 })
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+    pattern = "/home/cob/vimwiki/diary/*.md",
+    group = vim.api.nvim_create_augroup("daily_journal_template", { clear = true }),
+    callback = vimwiki_daily_journal_template
+})
+
