@@ -97,7 +97,7 @@ vim.cmd [[let g:vimwiki_list = [{
             \ 'syntax': 'markdown',
             \ 'ext': '.md',
             \ 'path_html': '~/vimwiki/site_html/',
-            \ 'custom_wiki2html': 'vimwiki_markdown'}]
+            \ 'custom_wiki2html': '~/vimwiki/publish_site.py'}]
         ]]
 
 -- '$HOME/Scripts/vimwiki2html.sh'
@@ -111,4 +111,6 @@ vim.cmd [[let g:markdown_fenced_languages = ['python', 'cpp', 'c', 'rust', 'vim'
         ]]
 -- Disable hiding tick marks for code blocks -- default is 2 for vimwiki
 vim.cmd [[let g:vimwiki_conceallevel = 0]]
+
+vim.cmd [[let g:vimwiki_markdown_link_ext = 1]]
 
