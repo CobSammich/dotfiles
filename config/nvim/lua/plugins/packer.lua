@@ -92,6 +92,7 @@ require('packer').startup(function(use)
 
   use('vimwiki/vimwiki')
   use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
+  use('norcalli/nvim-colorizer.lua')
 
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua

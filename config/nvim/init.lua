@@ -15,6 +15,7 @@ require "plugins.project"
 require "plugins.aerial"
 require "plugins.vim-doge"
 require "plugins.autopairs"
+require "plugins.colorizer"
 
 require "lsp.lsp"
 

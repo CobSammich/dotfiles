@@ -105,7 +105,7 @@ vim.cmd [[let g:vimwiki_hl_headers = 1]]
 -- Don't allow all markdown files to be vimwiki files
 vim.cmd [[let g:vimwiki_global_ext = 0]]
 -- Use code syntax highlighitng within vimwiki pages.
-vim.cmd [[let g:markdown_fenced_languages = ['python', 'cpp', 'c', 'rust', 'vim',
+vim.cmd [[let g:markdown_fenced_languages = ['python', 'cpp', 'c', 'rust', 'vim', 'lua', 'yaml', 'bash',
                                  \ 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript',
                                  \ 'ruby', 'sass', 'xml', 'html']
         ]]
