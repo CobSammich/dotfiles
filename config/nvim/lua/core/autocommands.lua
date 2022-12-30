@@ -36,7 +36,7 @@ local vimwiki_template = function()
     local filename = vim.fn.expand("%:p")
     -- Check if we are in the daily notes subdir, if we are then don't use this
     -- template.
-    if string.find(filename, "/home/cob/vimwiki/diary/") then
+    if string.find(filename, "/vimwiki/diary/") then
         return
     end
     vim.cmd([[0r ~/vimwiki/templates/default_template.md]])
@@ -52,13 +52,13 @@ end
 
 
 vim.api.nvim_create_autocmd("BufNewFile", {
-    pattern = "/home/cob/vimwiki/*.md",
+    pattern = "*/vimwiki/*.md",
     group = vim.api.nvim_create_augroup("basic_template", { clear = true }),
     callback = vimwiki_template
 })
 
 vim.api.nvim_create_autocmd("BufNewFile", {
-    pattern = "/home/cob/vimwiki/diary/*.md",
+    pattern = "*/vimwiki/diary/*.md",
     group = vim.api.nvim_create_augroup("daily_journal_template", { clear = true }),
     callback = vimwiki_daily_journal_template
 })
