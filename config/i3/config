@@ -269,6 +269,8 @@ gaps outer 0
 bindsym $mod+Shift+g gaps inner all set 2; gaps outer all set 0
 bindsym $mod+Shift+n gaps inner all set 0; gaps outer all set 0
 
+for_window [class="Xfce4-terminal"] border pixel 0
+
 # What follows here is optional and defines a mode that allows you to resize the gaps on the fly.
 # Press $mod1+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps.
 # Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace).
@@ -321,6 +323,7 @@ mode "$mode_gaps_outer" {
 ## Rob's cracked monitor - on right side
 #exec xrandr --output HDMI-0 --rotate left --auto --pos 0x0 --output HDMI-1 --auto --pos 3640x600 --output DP-2 --pos 1080x240 --primary
 exec xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --rotate left --auto --pos 0x0 --output HDMI-1 --auto --pos 3640x600 --output DP-2 --pos 1080x240 --primary
+#exec xrandr --output DP-2 --primary
 
 
 
@@ -331,7 +334,10 @@ exec xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --rotate left --auto --po
 #exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/LA_sunset.png' '/home/cob/Pictures/wallpapers/cherry-blossom-blue-pink.jpg'
 #exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/LA_sunset.png' '/home/cob/Pictures/wallpapers/wallpaperflare.com_wallpaper.jpg'
 #exec feh --no-fehbg --bg-scale '43_by_gydw1n_darxvlp-pre.png' '/home/cob/Pictures/wallpapers/21_by_gydw1n_dac5tet-fullview.png'
-exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/pink_gradient.jpg' '/home/cob/Pictures/wallpapers/everblush_ign_astronaut.png'
+#exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dmaztb4adsp61.png' '/home/cob/Pictures/wallpapers/vertical/purple_gradient.jpg' '/home/cob/Pictures/wallpapers/everblush_ign_astronaut.png'
+#exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/space_station.png' '/home/cob/Pictures/wallpapers/vertical/purple_gradient.jpg' '/home/cob/Pictures/wallpapers/everblush_ign_astronaut.png'
+#exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dc_spiderman.png' '/home/cob/Pictures/wallpapers/vertical/purple_gradient.jpg' '/home/cob/Pictures/wallpapers/everblush_ign_astronaut.png'
+exec feh --no-fehbg --bg-scale '/home/cob/Pictures/wallpapers/dc_spiderman.png' '/home/cob/Pictures/wallpapers/vertical/purple_gradient.jpg' '/home/cob/Pictures/wallpapers/ghost_type.png'
 
 # Get Fan colors on -- OpenRGB needs to be running in the background to persistently keep the fan colors.
 # exec sudo openrgb --startminimized --profile MiamiVice.orp
@@ -474,4 +480,4 @@ client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
 #}
 
 # call python script to change backgrounds
-bindsym F12 exec python $HOME/.config/scripts/change_wallpaper.py
+bindsym $mod+Shift+w  exec python $HOME/.config/scripts/change_wallpaper.py
