@@ -369,6 +369,7 @@ for_window [title="Thunar"] floating enable, resize set 1200px 700px
 for_window [title="Figure ?"] floating enable
 # Float xfce4-terminal
 for_window [class="Xfce4-terminal"] floating enable
+for_window [title="feh"] floating enable
 
 
 # Border style
