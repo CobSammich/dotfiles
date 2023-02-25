@@ -30,6 +30,9 @@ info_fg = "#00000f"
 [[block]]
 block = "sound"
 step_width = 5
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
 [block.theme_overrides]
 idle_bg = "#d71a1a"
 #idle_fg = "#00000f"
