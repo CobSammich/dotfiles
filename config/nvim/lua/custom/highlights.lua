@@ -11,6 +11,10 @@ M.override = {
   Comment = {
     italic = true,
   },
+  SpellBad = {
+    fg = "red"
+
+  }
 }
 
 ---@type HLTable
