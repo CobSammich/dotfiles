@@ -7,13 +7,13 @@ M.general = {
     -- Move between buffers
     ["L"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflineNext()
+        require("nvchad.tabufline").tabuflineNext()
       end,
       "Goto next buffer",
     },
     ["H"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
+        require("nvchad.tabufline").tabuflinePrev()
       end,
       "Goto prev buffer",
     },
@@ -28,13 +28,13 @@ M.general = {
     -- Arrange Buffers
     ["<leader>hh"] = {
       function()
-        require("nvchad_ui.tabufline").move_buf(-1)
+        require("nvchad.tabufline").move_buf(-1)
       end,
       "Move Buffer left",
     },
     ["<leader>ll"] = {
       function()
-        require("nvchad_ui.tabufline").move_buf(1)
+        require("nvchad.tabufline").move_buf(1)
       end,
       "Move Buffer left",
     },

@@ -76,14 +76,14 @@ local plugins = {
   },
 
   { "kevinhwang91/promise-async" },
-  {
-    "kevinhwang91/nvim-ufo",
-    lazy = false,
-    requires = "kevinhwang91/promise-async",
-    config = function()
-      require "custom.configs.ufo"
-    end,
-  },
+  -- {
+  --   "kevinhwang91/nvim-ufo",
+  --   lazy = false,
+  --   requires = "kevinhwang91/promise-async",
+  --   config = function()
+  --     require "custom.configs.ufo"
+  --   end,
+  -- },
 
   {
     "lervag/vimtex",
@@ -91,10 +91,40 @@ local plugins = {
   },
 
   -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
+  {
+    "NvChad/nvim-colorizer.lua",
+    enabled = false
+  },
+
+  {
+    "vimwiki/vimwiki",
+    lazy = false,
+    event = "BufEnter *.md",
+    ft = "md",
+    enabled = true,
+    init = function ()
+      vim.g.vimwiki_list = {
+        {
+          path = "~/vimwiki/",
+          template_path = '~/vimwiki/templates/',
+          template_default = 'default',
+          template_ext = '.html',
+          syntax = 'markdown',
+          ext = '.md',
+          path_html = '~/vimwiki/site_html/',
+          custom_wiki2html = '~/vimwiki/publish_site.py'
+        }
+      }
+      vim.g.vimwiki_hl_headers = 1
+      vim.g.vimwiki_global_ext = 0
+      vim.g.vimwiki_markdown_link_ext = 1
+      vim.g.vimwiki_conceallevel = 0
+    end,
+    -- config = function ()
+    --   vim.g.vimwiki_markdown_link_ext = 1,
+    --   vim.g.vimwiki_conceallevel = 0,
+    -- end
+  }
 
   -- All NvChad plugins are lazy-loaded by default
   -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
