@@ -127,6 +127,22 @@ local plugins = {
     --   vim.g.vimwiki_markdown_link_ext = 1,
     --   vim.g.vimwiki_conceallevel = 0,
     -- end
+  },
+
+  -- Auto Doc string
+  {
+    "kkoomen/vim-doge",
+    event = "BufRead",
+    config = function()
+      vim.cmd([[call doge#install()]])
+      vim.cmd([[let g:doge_doc_standard_python = 'numpy']])
+      vim.cmd([[let g:doge_python_settings = {
+        \ 'single_quotes': 0,
+        \ 'omit_redundant_param_types': 0
+        \}
+      ]])
+    end
+
   }
 
   -- All NvChad plugins are lazy-loaded by default
