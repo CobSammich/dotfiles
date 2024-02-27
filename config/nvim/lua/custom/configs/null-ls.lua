@@ -19,7 +19,7 @@ local sources = {
   b.formatting.clang_format,
 
   -- python
-  b.formatting.autopep8,
+  b.formatting.black,
   -- b.formatting.black.with({
   --   extra_args = { "--line-length=80" }
   -- }),
