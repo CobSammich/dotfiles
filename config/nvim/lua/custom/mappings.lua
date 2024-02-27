@@ -48,10 +48,15 @@ M.general = {
   },
 
   i = {
+     -- I have a problem with shifts...
     ["kj"] = { "<ESC>", "Exit Insert Mode", opts = { nowait = true } },
+    ["kJ"] = { "<ESC>", "Exit Insert Mode", opts = { nowait = true } },
+    ["Kj"] = { "<ESC>", "Exit Insert Mode", opts = { nowait = true } },
+    ["KJ"] = { "<ESC>", "Exit Insert Mode", opts = { nowait = true } },
   },
 }
 
+-- vim.cmd[[autocmd Filetype tex inoremap $ $$<ESC>i]]
 -- more keybinds!
 
 return M
