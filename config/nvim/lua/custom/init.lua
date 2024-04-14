@@ -18,7 +18,6 @@ opt.scrolloff = 8
 opt.sidescrolloff = 8
 opt.completeopt = { "menuone", "noselect"}
 opt.undofile = true
-opt.textwidth = 80
 
 ------------------
 -- Autocommands --
