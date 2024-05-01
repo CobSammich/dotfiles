@@ -26,8 +26,12 @@ BLUE="\[\033[0;34m\]"
 PURPLE="\[\033[0;35m\]"
 CYAN="\[\033[0;36m\]"
 
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # prompt is: [time] user@hostname:pwd$
-export PS1="$RED[\t] $YELLOW\u$GREEN@$BLUE\h:$CYAN\W$PURPLE$ $NORMAL"
+export PS1="$RED[\t] $YELLOW\u$GREEN@$BLUE\h:$CYAN\W$PURPLE\$(parse_git_branch)$ $NORMAL"
 
 ## Programs
 #alias discord="/home/cob/Applications/Discord/Discord"
