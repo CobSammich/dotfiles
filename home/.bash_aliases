@@ -51,7 +51,7 @@ alias open="xdg-open"
 
 ## Coding
 alias python="python3"
-alias ipython="$HOME/.local/bin/ipython"
+#alias ipython="$HOME/.local/bin/ipython"
 
 ## System suspension
 alias suspend='systemctl suspend'
