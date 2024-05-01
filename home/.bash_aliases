@@ -64,3 +64,5 @@ alias goto_school="cd ~/Documents/OMSCS/"
 alias goto_vim="cd ~/dotfiles/config/nvim/"
 alias goto_dots="cd ~/dotfiles"
 alias goto_wiki="cd ~/vimwiki"
+
+alias pomo="~/.config/scripts/pomodoro.sh"
