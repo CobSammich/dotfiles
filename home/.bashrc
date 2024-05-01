@@ -32,7 +32,7 @@ fi
 # pandoc
 export PATH="$HOME/git_repos/pandoc/bin:$PATH"
 # pip installed packages
-export PATH="$HOME/.local/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
 # Keep track of current directory -- this is for opening new terminals in pwd for i3
 export PROMPT_COMMAND="pwd > /tmp/whereami"
 
