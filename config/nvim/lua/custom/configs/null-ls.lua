@@ -18,6 +18,9 @@ local sources = {
   -- cpp
   b.formatting.clang_format,
 
+  -- rust
+  b.formatting.rustfmt,
+
   -- python
   b.formatting.isort,
   b.formatting.black,
