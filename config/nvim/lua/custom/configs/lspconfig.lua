@@ -15,13 +15,24 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
-	vim.diagnostic.config({
-		virtual_text = false,
-	})
+  if lsp == "clangd" then
+    lspconfig[lsp].setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      cmd = {
+        "clangd",
+        "--offset-encoding=utf-16",
+      }
+    })
+  else
+    lspconfig[lsp].setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+    })
+  end
+  vim.diagnostic.config({
+    virtual_text = false,
+  })
 end
 
 --
