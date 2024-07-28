@@ -8,6 +8,7 @@ local b = null_ls.builtins
 
 local sources = {
 
+  -- FORMATTING
   -- webdev stuff
   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with { filetypes = { "markdown", "vimwiki" } }, -- so prettier works only on these filetypes
@@ -21,12 +22,17 @@ local sources = {
   -- rust
   b.formatting.rustfmt,
 
+  -- yaml
+  b.formatting.yamlfmt,
+
   -- python
   b.formatting.isort,
   b.formatting.black,
   -- b.formatting.black.with({
   --   extra_args = { "--line-length=80" }
   -- }),
+
+  -- DIAGNOSTICS / LSP
   b.diagnostics.ruff,
 }
 
