@@ -12,6 +12,7 @@ local servers = {
 	"texlab",
 	"dockerls",
 	"marksman",
+  "csharp_ls",
 }
 
 for _, lsp in ipairs(servers) do
