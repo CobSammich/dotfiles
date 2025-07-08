@@ -1,44 +1,18 @@
-local overrides = require "custom.configs.overrides"
+return {
+  {
+    "stevearc/conform.nvim",
+    -- event = 'BufWritePre', -- uncomment for format on save
+    opts = require "configs.conform",
+  },
 
----@type NvPluginSpec[]
-local plugins = {
-
-  -- Override plugin definition options
-
+  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      -- format & linting
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "custom.configs.null-ls"
-        end,
-      },
-    },
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
-    end, -- Override to setup mason-lspconfig
+      require "configs.lspconfig"
+    end,
   },
 
-  -- override plugin configs
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason,
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
-  },
-
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
-  },
-
-  -- Install a plugin
   {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
@@ -90,13 +64,28 @@ local plugins = {
 
   {
     "lervag/vimtex",
-    ft = "tex"
+    ft = "tex",
+    init = function()
+      -- VimTeX configuration goes here, e.g.
+      vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_compiler_method = "latexmk"
+      vim.g.vimtex_compiler_latexmk = {
+        options = {
+          "-shell-escape",
+          "-verbose",
+          "-file-line-error",
+          "-interaction=nonstopmode",
+          "-synctex=1",
+          "-pdf",
+        },
+      }
+    end,
   },
 
   -- To make a plugin not be loaded
   {
     "NvChad/nvim-colorizer.lua",
-    enabled = false
+    enabled = false,
   },
 
   {
@@ -105,18 +94,18 @@ local plugins = {
     event = "BufEnter *.md",
     ft = "md",
     enabled = true,
-    init = function ()
+    init = function()
       vim.g.vimwiki_list = {
         {
           path = "~/vimwiki/",
-          template_path = '~/vimwiki/templates/',
-          template_default = 'default',
-          template_ext = '.html',
-          syntax = 'markdown',
-          ext = '.md',
-          path_html = '~/vimwiki/site_html/',
-          custom_wiki2html = '~/vimwiki/publish_site.py'
-        }
+          template_path = "~/vimwiki/templates/",
+          template_default = "default",
+          template_ext = ".html",
+          syntax = "markdown",
+          ext = ".md",
+          path_html = "~/vimwiki/site_html/",
+          custom_wiki2html = "~/vimwiki/publish_site.py",
+        },
       }
       vim.g.vimwiki_hl_headers = 1
       vim.g.vimwiki_global_ext = 0
@@ -134,24 +123,26 @@ local plugins = {
     "kkoomen/vim-doge",
     event = "BufRead",
     config = function()
-      vim.cmd([[call doge#install()]])
-      vim.cmd([[let g:doge_doc_standard_python = 'numpy']])
-      vim.cmd([[let g:doge_python_settings = {
+      vim.cmd [[call doge#install()]]
+      vim.cmd [[let g:doge_doc_standard_python = 'numpy']]
+      vim.cmd [[let g:doge_python_settings = {
         \ 'single_quotes': 0,
         \ 'omit_redundant_param_types': 0
         \}
-      ]])
-    end
+      ]]
+    end,
+  },
 
-  }
+  -- test new blink
+  -- { import = "nvchad.blink.lazyspec" },
 
-  -- All NvChad plugins are lazy-loaded by default
-  -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
-  -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
   -- {
-  --   "mg979/vim-visual-multi",
-  --   lazy = false,
-  -- }
+  -- 	"nvim-treesitter/nvim-treesitter",
+  -- 	opts = {
+  -- 		ensure_installed = {
+  -- 			"vim", "lua", "vimdoc",
+  --      "html", "css"
+  -- 		},
+  -- 	},
+  -- },
 }
-
-return plugins
