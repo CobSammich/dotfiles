@@ -70,3 +70,9 @@ alias goto_dots="cd ~/dotfiles"
 alias goto_wiki="cd ~/vimwiki"
 
 alias pomo="~/.config/scripts/pomodoro.sh"
+# alias p50="clear && pomodoro start --duration 50 --wait"
+# alias p25="clear && pomodoro start --duration 25 --wait"
+# alias p1="clear && pomodoro start --duration 1 --wait && notify-send \"Pomodoro Over! Take a Break!\" --icon=/usr/share/icons/Paper/512x512/apps/alarm-clock.png"
+
+alias tn="tmux new -s"
+alias ta="tmux a -d -t"
