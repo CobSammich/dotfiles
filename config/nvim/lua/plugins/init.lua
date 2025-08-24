@@ -10,6 +10,9 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
+      vim.diagnostic.config {
+        virtual_text = false,
+      }
     end,
   },
 
